@@ -2,6 +2,12 @@ var BattleOfDebilism = BattleOfDebilism || {};
 var FIRE_DELAY_MS = 200;
 var RELOAD_TIMEOUT_MS = 2000;
 var MAX_BULLETS_IN_MAGAZINE = 3;
+var PLAYER_ID_TO_SPRITE = {
+  player1: 'stipenis',
+  player2: 'pope',
+  player3: 'miso',
+  player4: 'mod'
+};
 var nextFireTime = 0;
 var bulletsInMagazine = MAX_BULLETS_IN_MAGAZINE;
 var isReloading = false;
@@ -26,7 +32,7 @@ BattleOfDebilism.utils = function utils() {
   return {
     createPlayer: function createPlayer(id, group, position) {
       PLAYER_TILE = findPlayerTile(id);
-      var sprite = createSprite(position ? position : PLAYER_TILE, group, 'stipenis');
+      var sprite = createSprite(position ? position : PLAYER_TILE, group, PLAYER_ID_TO_SPRITE[id]);
       BattleOfDebilism.game.physics.arcade.enable(sprite);
       sprite.body.bounce.y = 0.2;
       sprite.body.gravity.y = 500;

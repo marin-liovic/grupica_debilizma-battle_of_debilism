@@ -16,6 +16,9 @@ var BattleOfDebilism = BattleOfDebilism || {};
     game.load.image('background', 'assets/images/background.jpg');
     game.load.image('bullet', 'assets/images/bullet.png');
     game.load.spritesheet('stipenis', 'assets/images/stipenis_spritesheet.png', 32, 67);
+    game.load.spritesheet('pope', 'assets/images/pope_spritesheet.png', 32, 67);
+    game.load.spritesheet('mod', 'assets/images/mod_spritesheet.png', 32, 67);
+    game.load.spritesheet('miso', 'assets/images/miso_spritesheet.png', 32, 67);
   }
 
   function create() {
@@ -28,7 +31,7 @@ var BattleOfDebilism = BattleOfDebilism || {};
     map.setCollisionBetween(1, 100000, true, 'wallLayer');
     wallLayer.resizeWorld();
     game.physics.startSystem(Phaser.Physics.ARCADE);
-    text = game.add.text(0, 0, 'Magazine: ' + BattleOfDebilism.utils.getMagazineSize(), {
+    text = game.add.text(0, 0, 'Ammo: ' + BattleOfDebilism.utils.getMagazineSize(), {
       font: "30px Arial",
       fill: "#ffffff",
       align: "center"
@@ -78,6 +81,6 @@ var BattleOfDebilism = BattleOfDebilism || {};
   }
 
   function render() {
-    text.setText('Magazine:' + BattleOfDebilism.utils.getMagazineSize());
+    text.setText('Ammo:' + BattleOfDebilism.utils.getMagazineSize());
   }
 })();
