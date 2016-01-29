@@ -4,8 +4,10 @@
   "description": "Grupica Debilizma : Battle of Debilism",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
+  "engine": "node 0.10.25",
   "keywords": [
     "grupica",
     "debilizma",
