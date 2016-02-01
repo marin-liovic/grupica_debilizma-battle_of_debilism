@@ -1,4 +1,4 @@
-# grupica_debilizma-battle_of_debilism
+# Grupica Debilizma - Battle of Debilism
 
 Battle of Debilism is a 2D multiplayer arena shooter in browser.
 Stack: node.js, phaser.io and websockets
